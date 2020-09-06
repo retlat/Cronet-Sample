@@ -3,6 +3,8 @@ package com.example.sample.ui
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupWithNavController
 import com.example.sample.R
 import com.example.sample.databinding.ActivityMainBinding
 import com.example.sample.util.CronetInstaller
@@ -27,6 +29,11 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setSupportActionBar(binding.toolbar)
+
+        binding.toolbar.setupWithNavController(
+            findNavController(R.id.nav_host_fragment),
+            AppBarConfiguration(setOf(R.id.InitialFragment, R.id.HomeFragment))
+        )
     }
 
     override fun onResume() {
