@@ -4,4 +4,8 @@
     <string name="initial_text">Initializing</string>
 
     <string name="home_post_button">POST JSON</string>
+    <string name="home_result_404">Result: Not Found</string>
+    <string name="home_result_500">Result: Not Found</string>
+    <string name="home_result_503">Result: Not Found</string>
+    <string name="home_result_else">Result: Not Found</string>
 </resources>
