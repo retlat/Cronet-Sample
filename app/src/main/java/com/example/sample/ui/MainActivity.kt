@@ -2,7 +2,7 @@ package com.example.sample.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.sample.R
+import com.example.sample.databinding.ActivityMainBinding
 import com.example.sample.util.CronetInstaller
 import com.google.android.gms.common.GoogleApiAvailability
 import dagger.hilt.android.AndroidEntryPoint
@@ -17,10 +17,14 @@ class MainActivity : AppCompatActivity() {
     @Inject
     lateinit var installer: CronetInstaller
 
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        setSupportActionBar(findViewById(R.id.toolbar))
+
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        setSupportActionBar(binding.toolbar)
     }
 
     override fun onResume() {
