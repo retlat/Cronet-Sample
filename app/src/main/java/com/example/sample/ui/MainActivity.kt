@@ -1,7 +1,8 @@
-package com.example.sample
+package com.example.sample.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.sample.R
 import com.example.sample.util.CronetInstaller
 import com.google.android.gms.common.GoogleApiAvailability
 import dagger.hilt.android.AndroidEntryPoint

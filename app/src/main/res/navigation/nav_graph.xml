@@ -6,5 +6,5 @@
 
     <fragment
         android:id="@+id/InitialFragment"
-        android:name="com.example.sample.InitialFragment" />
+        android:name="com.example.sample.ui.InitialFragment" />
 </navigation>
