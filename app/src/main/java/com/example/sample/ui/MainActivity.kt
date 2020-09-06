@@ -2,6 +2,8 @@ package com.example.sample.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.findNavController
+import com.example.sample.R
 import com.example.sample.databinding.ActivityMainBinding
 import com.example.sample.util.CronetInstaller
 import com.google.android.gms.common.GoogleApiAvailability
@@ -36,7 +38,10 @@ class MainActivity : AppCompatActivity() {
             .addOnFailureListener { finish() }
             .addOnSuccessListener {
                 installer.install(this)
-                    .addOnSuccessListener { TODO() }
+                    .addOnSuccessListener {
+                        findNavController(R.id.nav_host_fragment)
+                            .navigate(R.id.action_initial_to_home)
+                    }
                     .addOnFailureListener { finish() }
             }
     }
